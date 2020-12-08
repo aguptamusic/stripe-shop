@@ -7,6 +7,7 @@ import BillingDetailsFields from "./prebuilt/BillingDetailsFields";
 import SubmitButton from "./prebuilt/SubmitButton";
 import CheckoutError from "./prebuilt/CheckoutError";
 
+import { CardElement } from '@stripe/react-stripe-js';
 const CardElementContainer = styled.div`
   height: 40px;
   display: flex;
@@ -43,7 +44,9 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
         <BillingDetailsFields />
       </Row>
       <Row>
-        <CardElementContainer></CardElementContainer>
+        <CardElementContainer>
+          <CardElement />
+        </CardElementContainer>
       </Row>
       {checkoutError && <CheckoutError>{checkoutError}</CheckoutError>}
       <Row>
