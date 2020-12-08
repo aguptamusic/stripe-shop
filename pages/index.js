@@ -7,11 +7,11 @@ import DonutShop from "../components/prebuilt/DonutShop";
 import CheckoutForm from "../components/CheckoutForm";
 import getDonutPrice from "../utils/get-donut-price";
 
-const MainPage = props => {
+const MainPage = (props) => {
   const [numDonuts, setNumDonuts] = useState(1);
 
-  const addDonut = () => setNumDonuts(num => Math.min(12, num + 1));
-  const remDonut = () => setNumDonuts(num => Math.max(1, num - 1));
+  const addDonut = () => setNumDonuts((num) => Math.min(12, num + 1));
+  const remDonut = () => setNumDonuts((num) => Math.max(1, num - 1));
 
   return (
     <Layout title="Donut Shop">
